@@ -6,16 +6,6 @@ const fs = require('fs');
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-fs.readdir("./cmds/", (err, files) => {
-
-  if(err) console.log(err);
-
-  let jsfile = files.filter(f => f.split(".").pop() === "js")
-  if(jsfile.lenght <= 0){
-    console.log("Couldn't find any cmds!");
-    return;
-  }
-
   jsfile.forEach((f, i) =>{
     let props = require(`./cmds/${f}`);
     console.log(`${f} loaded.`);
