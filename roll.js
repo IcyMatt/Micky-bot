@@ -2,10 +2,6 @@ const Discord = require("discord.js");
 const botconfig = require('./botconfig.json');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-  console.log("Here I am.");
-});
-
 client.on('message', (message) => {
   const messageWords = message.content.split(' ');
   const rollFlavor = messageWords.slice(2).join(' ');
