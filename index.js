@@ -19,7 +19,7 @@ fs.readdir("./cmds/", (err, files) => {
   jsfile.forEach((f, i) =>{
     let props = require(`./cmds/${f}`);
     console.log(`${f} loaded.`);
-    bot.commands.set(props.help.name, props);
+    client.commands.set(props.help.name, props);
   });
 
 });
@@ -38,15 +38,12 @@ client.on('message', message => {
 }
 });
 
-
-client.login(process.env.token)
-
-bot.on("ready", function() {
+client.on("ready", function() {
    console.log("4CT1V4T3D.");
-   bot.user.setActivity("Being Useless!");
+   client.user.setActivity("Being Useless!");
 });
 
-bot.on("message", function(message) {
+client.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     let prefix = botconfig.prefix;
@@ -56,13 +53,13 @@ bot.on("message", function(message) {
 
 if (cmd === `${prefix}botinfo`){
 
-    let bicon = bot.user.displayAvatarURL;
+    let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setDescription("__**Bot information:**__")
     .setColor("#18D1FA")
     .setThumbnail(bicon)
-    .addField("**Bot name:**", bot.user.username)
-    .addField("**Created on:**", bot.user.createdAt);
+    .addField("**Bot name:**", client.user.username)
+    .addField("**Created on:**", client.user.createdAt);
 
     return message.channel.send(botembed);
 }
