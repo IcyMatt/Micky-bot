@@ -39,9 +39,7 @@ client.on('message', message => {
 });
 
 
-client.login('NDg3MjUzMzczOTU2MTI4NzY5.DqPIsw.3X2p_404HKJS97W-GU1ZZfcDCBU');
-
-const TOKEN = "NDg3MjUzMzczOTU2MTI4NzY5.DqPIsw.3X2p_404HKJS97W-GU1ZZfcDCBU";
+client.login(process.env.token)
 
 bot.on("ready", function() {
    console.log("4CT1V4T3D.");
