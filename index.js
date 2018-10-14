@@ -9,11 +9,13 @@ bot.commands = new Discord.Collection();
 
 const prefix = "%";
 
-client.user.setActivity("Being Useless!");
+client.on ("ready", () => {
+    console.log ("ready!");
+
+    client.user.setActivity ("Being Useless!");
+});
 
 require('http').createServer().listen(3000);
-
-
 
 client.on('message', message => {
     
