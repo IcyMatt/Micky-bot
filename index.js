@@ -23,9 +23,9 @@ client.on('message', message => {
 
     if (message.author.bot) return;
     
-    if (message.content (prefix + "thassgay")) {
+    if (msg.startsWith (prefix + "thassgay")) {
         const attachment = new Attachment('https://78.media.tumblr.com/3a6be712212ba73401428d195eb09915/tumblr_o1wjdhiYaC1r9ee9go1_1280.png');
-        message.channel.send(`${message.author}, Some true good shit.`, attachment);
+        message.channel.send(`${message.author}, Some truly good shit.`, attachment);
 
 
     let messageArray = message.content.split(" ");
