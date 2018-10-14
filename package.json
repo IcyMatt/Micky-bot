@@ -1,0 +1,17 @@
+{
+  "name": "micky-bot",
+  "version": "1.0.0",
+  "description": "Just a test bot, nothing more, nothing less",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'build script executed'"
+  },
+  "author": "Micky",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "pm2": "^3.0.4"
+  }
+}
